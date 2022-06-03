@@ -1,0 +1,207 @@
+GIT Bash 
+
+1) посмотреть где я
+an_re@DESKTOP-7T2IS27 MINGW64 ~
+$ pwd
+/c/Users/an_re
+
+2)создать папку 
+an_re@DESKTOP-7T2IS27 MINGW64 ~
+$ mkdir qa30_course
+
+an_re@DESKTOP-7T2IS27 MINGW64 ~
+$
+
+3)зайти в папку 
+$ cd qa30_course
+
+an_re@DESKTOP-7T2IS27 MINGW64 ~/qa30_course
+$
+
+4)создать 3 папки
+$ mkdir Fold1 Fold2 Fold3
+
+an_re@DESKTOP-7T2IS27 MINGW64 ~/qa30_course
+$ mkdir qa2
+
+an_re@DESKTOP-7T2IS27 MINGW64 ~/qa30_course
+$ mkdir qa3
+
+an_re@DESKTOP-7T2IS27 MINGW64 ~/qa30_course
+$
+
+5)зайти в любую папку 
+$ cd qa1
+
+an_re@DESKTOP-7T2IS27 MINGW64 ~/qa30_course/qa1
+$
+touch lesson1.txt
+
+6)создать 5 файлов (3 txt, 2 json)
+$ touch {lesson1.txt,lesson2.txt,lesson3.txt,less4.json,less5.json}
+
+an_re@DESKTOP-7T2IS27 MINGW64 ~/qa30_course/qa1
+$
+7) создать 3 папки
+$ mkdir {folder1,folder2,folder3}
+
+an_re@DESKTOP-7T2IS27 MINGW64 ~/qa30_course/qa1
+$
+8)вывести список содержимого папки 
+$ ls -la
+total 4
+drwxr-xr-x 1 an_re 197609 0 May 19 22:50 ./
+drwxr-xr-x 1 an_re 197609 0 May 19 22:35 ../
+drwxr-xr-x 1 an_re 197609 0 May 19 22:50 folder1/
+drwxr-xr-x 1 an_re 197609 0 May 19 22:50 folder2/
+drwxr-xr-x 1 an_re 197609 0 May 19 22:50 folder3/
+-rw-r--r-- 1 an_re 197609 0 May 19 22:46 less4.json
+-rw-r--r-- 1 an_re 197609 0 May 19 22:46 less5.json
+-rw-r--r-- 1 an_re 197609 0 May 19 22:46 lesson1.txt
+-rw-r--r-- 1 an_re 197609 0 May 19 22:46 lesson2.txt
+-rw-r--r-- 1 an_re 197609 0 May 19 22:46 lesson3.txt
+
+an_re@DESKTOP-7T2IS27 MINGW64 ~/qa30_course/qa1
+$
+
+9)+ открыть любой txt файл
+$ start lesson1.txt
+
+
+an_re@DESKTOP-7T2IS27 MINGW64 ~/qa30_course/qa1
+$
+
+или
+
+$ cat lesson1.txt
+
+an_re@DESKTOP-7T2IS27 MINGW64 ~/qa30_course/qa1
+$
+
+или 
+vim lesson1.txt
+
+10)+ написать туда что-нибудь, любой текст
+$ cat >>lesson1.txt
+lesson one
+
+
+an_re@DESKTOP-7T2IS27 MINGW64 ~/qa30_course/qa1
+$
+11) сохранить и выйти (нажатие Enter, нажатие Ctrl+C), если в vim, то :wq 
+12) выйти из папки на уровень выше
+$ cd ..
+
+an_re@DESKTOP-7T2IS27 MINGW64 ~/qa30_course
+$
+
+13)переместить любые два файла, которые вы создали, в любую другую папку
+
+mv qa1/less5.json qa1/lesson3.txt qa3
+
+
+an_re@DESKTOP-7T2IS27 MINGW64 ~/qa30_course
+$ mv qa1/less4.json qa2/less4.json
+
+an_re@DESKTOP-7T2IS27 MINGW64 ~/qa30_course
+$
+
+14)скопировать любые два файла, которые вы создали, в любую другую папку
+
+cp qa3/less5.json qa3/lesson3.txt qa1
+
+
+an_re@DESKTOP-7T2IS27 MINGW64 ~/qa30_course
+$
+
+15)найти файл по имени
+
+поиск файла по имени
+
+find . -name "lesson1.txt"
+./qa2/lesson1.txt
+
+
+an_re@DESKTOP-7T2IS27 MINGW64 ~/qa30_course/qa1
+$
+
+16) просмотреть содержимое в реальном времени (команда grep)
+
+содержимое в реальном времени
+ tail -f lesson2.txt
+
+			
+grep:
+перейти в директорию с непустым текстовым файлом lesson1.txt
+$ cd qa2
+
+an_re@DESKTOP-7T2IS27 MINGW64 ~/qa30_course/qa2
+$
+
+поиск текстовых данных one в файле
+$ cat lesson1.txt|grep one
+lesson one
+
+an_re@DESKTOP-7T2IS27 MINGW64 ~/qa30_course/qa2
+$
+
+17)вывести несколько первых строк из текстового файла
+
+$ head -2 lesson1.txt
+lesson one
+lesson two
+
+an_re@DESKTOP-7T2IS27 MINGW64 ~/qa30_course/qa2
+$
+
+18)вывести несколько последних строк из текстового файла 
+dвсего 12 строк в файле lesson1.txt
+
+C:\Users\an_re\qa30_course\qa2>tail -4 lesson1.txt
+tail -4 lesson1.txt
+
+
+19)просмотреть содержимое длинного файла (команда less)
+
+$ cd qa2
+
+an_re@DESKTOP-7T2IS27 MINGW64 ~/qa30_course/qa2
+$ less lesson1.txt
+
+20) вывести дату и время 
+$ date
+Fri May 20 10:58:03 RTZ 2022
+
+Задание
+
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+
+C:\Users\an_re\qa30_course\qa2>curl "http://162.55.220.72:5005/terminal-hw-request"
+curl "http://162.55.220.72:5005/terminal-hw-request"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   283  100   283    0     0   3430      0 --:--:-- --:--:-- --:--:--  3493{
+  "Intro": "Hello!! This is your the first response from server",
+  "Tasks": {
+    "Task_1": "Send the next URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)",
+    "result": [
+      "Your_String",
+      "Your_number"
+    ]
+  }
+}
+
+C:\Users\an_re\qa30_course\qa2>curl "http://162.55.220.72:5005/get_method?name=(Jane)&age=(10)"
+curl "http://162.55.220.72:5005/get_method?name=(Jane)&age=(10)"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    26  100    26    0     0    250      0 --:--:-- --:--:-- --:--:--   254[
+  "(Jane)",
+  "(10)"
+]
+
+
+
+
+
